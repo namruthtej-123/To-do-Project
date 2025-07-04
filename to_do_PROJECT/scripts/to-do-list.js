@@ -75,7 +75,7 @@ function minusAdder(input) {
 // Sorts tasks based on their due date
 function sortingTasks() {
   let todoListDictionary = {};
-  for (let i = 2; i < todoList.length; i++) {
+  for (let i = 0; i < todoList.length; i++) {
     const item = todoList[i];
     todoListDictionary[item.name] = dueDatesToIntegers(item.dueDate);
   }
