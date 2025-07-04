@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List Project</title>
+    <style>
+      body {
+            background-image: url('images/Gemini_Generated_Image_hjns9chjns9chjns.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+          }
+    </style>
+
+    <link rel="stylesheet" href="styles/to_do_list.css">
+  </head>
+  <body>
+    <p class="main-heading">Enter the To Do's</p>
+    <input placeholder="Write here" class="js-name-input">
+    <input type="date" class="js-due-date-element">
+    <button onclick="addtoDo(); sortingTasks();" class="add-button">Add(+)</button>
+
+    <!-- Task Sections in a Row -->
+    <div class="task-container">
+      <div class="task-section">
+        <h3>Pending Tasks</h3>
+        <div class="js-todo-list"></div>
+      </div>
+
+      <div class="task-section">
+        <h3>Completed Tasks</h3>
+        <div class="js-completed-tasks"></div>
+      </div>
+
+      <div class="task-section">
+        <h3>Deleted Tasks</h3>
+        <div class="js-deleted-tasks"></div>
+      </div>
+
+      <div class="task-section">
+        <h3>Actions</h3>
+        <div class="task-container">
+          <button onclick="sortingTasks(); sortedTasksIntoWebPage();" class="task-section">Sorted Tasks</button><br><br>
+          <button onclick="resetTaskButton();" class="task-section">Reset Tasks</button>
+        </div>
+        
+        <div class="js-sorted-tasks-in-web-pages"></div>
+      </div>
+    </div>
+
+
+
+    <script src="scripts/to-do-list.js"></script>
+  </body>
+
+</html>

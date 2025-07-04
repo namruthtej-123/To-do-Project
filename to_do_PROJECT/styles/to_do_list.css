@@ -1,0 +1,128 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Flexbox layout for horizontal row */
+.task-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: nowrap; /* prevent wrapping */
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Styling each section */
+.task-section {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  cursor:pointer;
+}
+
+
+
+.js-name-input,
+.js-due-date-element{
+  padding :15px 40px;
+  margin-left:38px;
+  border-radius:40px;
+  border-width:3px;
+  border-color: #4CAF50;
+}
+.add-button{
+  padding :15px 10px;
+  margin-left:38px;
+  font-weight:bolder;
+  border-radius:40px;
+  cursor:pointer;
+}
+.add-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect - slightly scale up */
+.add-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Click effect - slight shrink */
+.add-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-heading{
+  font-size: 40px;
+  font-weight: bolder;
+  color:#000000;
+  margin-left:30px;
+}
+
+/*transition for add button
+*/
+.add-button{
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+
+.add-button::before,
+.add-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+  }
+
+.add-button::before {
+  left: -10px;
+  background: #240046;
+}
+
+.add-button::after {
+  right: -10px;
+  background: #5a189a;
+}
+
+.add-button:hover::before,
+.add-button:hover::after {
+  width: 58%;
+  }
+
+.add-button:hover span {
+  color: #e0aaff;
+  transition: 0.3s;
+}
+
+.add-button span {
+  color: #03045e;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}
