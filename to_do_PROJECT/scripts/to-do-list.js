@@ -13,7 +13,7 @@ loadFromLocalStorage();
 // Renders all pending tasks from todoList (skips first 2 default entries)
 function renderTodoList() {
   let todoListHTML = '';
-  for (let i = 2; i < todoList.length; i++) {
+  for (let i = 0; i < todoList.length; i++) {
     const todoObject = todoList[i];
     const name = todoObject.name;
     const dueDate = todoObject.dueDate;
